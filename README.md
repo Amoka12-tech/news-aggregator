@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Project Name: News Aggregator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a News Aggregator application that fetches and displays news articles from multiple APIs, including NewsAPI, The Guardian, and The New York Times. It is fully Dockerized to simplify setup and deployment.
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+- Docker: Ensure you have Docker installed on your machine.
+- Docker Compose: Verify that Docker Compose is available.
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React.js-based frontend application.
+- **Docker Configuration**: Docker and Docker Compose files for easy setup.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation and Setup
 
-### `npm test`
+Follow these steps to set up and run the project:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 1. Clone the Repository
 
-### `npm run build`
+```bash
+git clone <https://github.com/Amoka12-tech/news-aggregator.git>
+cd <news-aggregator>
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2. Environment Configuration
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Frontend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. . Copy the `.env.example` file to `.env`:
 
-### `npm run eject`
+   ```bash
+   cp .env.example .env
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install dependencies (optional if not using Docker for dependency management):
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 3. Build and Run the Project with Docker
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Navigate to the root directory of the project.
+2. Run the following command to start all local services:
 
-## Learn More
+    ```bash
+    docker run -p 3000:80 amoka-news-aggregator
+    ```
+3. Run the following command to build app for docker:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   docker build -t amoka-news-aggregator .
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. The frontend will be accessible at [http://localhost:3000](http://localhost:3000).
 
-### Code Splitting
+### 4. Access the Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Frontend**: Access the React app at `http://localhost:3000`.
 
-### Analyzing the Bundle Size
+## Testing the Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Frontend**: Open a browser and navigate to `http://localhost:3000`.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
