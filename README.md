@@ -42,18 +42,19 @@ cd <news-aggregator>
 ### 3. Build and Run the Project with Docker
 
 1. Navigate to the root directory of the project.
-2. Run the following command to start all local services:
 
-    ```bash
-    docker run -p 3000:80 amoka-news-aggregator
-    ```
-3. Run the following command to build app for docker:
+2. Run the following command to build app for docker:
 
    ```bash
    docker build -t amoka-news-aggregator .
    ```
+3. Run the following command to start all local services:
 
-3. The frontend will be accessible at [http://localhost:3000](http://localhost:3000).
+    ```bash
+    docker run -p 3000:80 amoka-news-aggregator
+    ```
+
+4. The frontend will be accessible at [http://localhost:3000](http://localhost:3000).
 
 ### 4. Access the Application
 
